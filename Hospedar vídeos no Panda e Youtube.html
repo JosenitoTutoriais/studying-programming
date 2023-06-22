@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vídeos do Programação Web</title>
+</head>
+<style>
+
+  @charset="utf-8";
+
+    /* Estilos globais */
+/* Estilos do cabeçalho */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Estilos do conteúdo principal */
+main {
+  padding: 20px;
+}
+
+/* Estilos dos vídeos */
+#video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+</style>
+<body>
+  <header>
+    <h1>Calculadora em HTML5 E CSS3 E JAVA SCRIPT</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Criando uma Calculadora em HTML5 E CSS3 E JAVA SCRIPT</h2>
+      <div id="video-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;Josenito Tutoriais - 2023 Meu Site Responsivo</p>
+  </footer>
+
+  <script>
+
+    window.addEventListener('DOMContentLoaded', function() {
+  // Array de URLs dos vídeos do Youtube
+  var videoURLs = [
+    'https://www.youtube.com/embed/nCW0EiYWDlA',
+    'https://www.youtube.com/embed/W-F3D9qE8YY',
+    'https://www.youtube.com/embed/TH9yaurDQgQ',
+    'https://www.youtube.com/embed/2XcF7qJjqaU'
+  ];
+
+  var videoContainer = document.getElementById('video-container');
+
+  // Loop pelos URLs dos vídeos
+  for (var i = 0; i < videoURLs.length; i++) {
+    var videoURL = videoURLs[i];
+
+    // Cria um elemento <iframe> para cada vídeo
+    var videoElement = document.createElement('iframe');
+    videoElement.src = videoURL;
+    videoElement.frameborder = '0';
+    videoElement.allowfullscreen = true;
+
+    // Adiciona o elemento <iframe> ao container de vídeos
+    videoContainer.appendChild(videoElement);
+  }
+});
+
+  </script>
+</body>
+</html>
